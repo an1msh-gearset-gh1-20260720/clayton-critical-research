@@ -1,10 +1,5 @@
 {
-  "packageDirectories": [
-    {
-      "path": "/proc/self/cwd/force-app",
-      "default": true
-    }
-  ],
+  "packageDirectories": [{"path": "force-app", "default": true}],
   "name": "ClaytonCriticalResearch",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
