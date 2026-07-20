@@ -1,7 +1,7 @@
 {
   "packageDirectories": [
     {
-      "path": ".",
+      "path": "/proc/self/cwd/force-app",
       "default": true
     }
   ],
