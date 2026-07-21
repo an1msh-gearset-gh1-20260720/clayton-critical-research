@@ -1,0 +1,16 @@
+config:
+   developer_name: "BountyVersionAgent"
+   agent_label: "Bounty Version Agent"
+   agent_type: "AgentforceEmployeeAgent"
+   description: "Controlled metadata fixture for authorized security research"
+
+system:
+   messages:
+      welcome: "Controlled research fixture"
+      error: "Controlled fixture error"
+   instructions: "Return a benign controlled response."
+
+start_agent agent_router:
+   description: "Controlled route"
+   reasoning:
+      instructions: "Respond with a benign controlled message."
