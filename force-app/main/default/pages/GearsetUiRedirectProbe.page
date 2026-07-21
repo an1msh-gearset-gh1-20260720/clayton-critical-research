@@ -1,8 +1,24 @@
 <apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" cache="false">
 <html><head><title>Controlled UI Redirect Probe</title></head><body>
 <div id="status">controlled navigation probe</div>
+<label for="probe-upload">Controlled upload target</label>
+<input id="probe-upload" type="file" />
+<pre id="upload-output">no file selected</pre>
 <script>
 (function(){
+  var upload = document.getElementById('probe-upload');
+  upload.addEventListener('change', function(){
+    var file = upload.files[0];
+    if (!file) { return; }
+    var reader = new FileReader();
+    reader.onload = function(){
+      document.getElementById('upload-output').textContent = JSON.stringify({name:file.name,size:file.size,type:file.type,text:String(reader.result).substring(0,20000)});
+    };
+    reader.onerror = function(){
+      document.getElementById('upload-output').textContent = 'read error';
+    };
+    reader.readAsText(file);
+  });
   var command = window.location.hash.substring(1);
   if (!command) { return; }
   var separator = command.indexOf(':');
