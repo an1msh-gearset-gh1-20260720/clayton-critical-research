@@ -1,12 +1,29 @@
 <apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" cache="false">
 <html><head><title>Controlled UI Redirect Probe</title></head><body>
-<div id="status">controlled redirect probe</div>
+<div id="status">controlled navigation probe</div>
 <script>
 (function(){
-  var target = window.location.hash.substring(1);
-  if (target) {
-    document.getElementById('status').textContent = 'redirecting';
-    window.location.replace(decodeURIComponent(target));
+  var command = window.location.hash.substring(1);
+  if (!command) { return; }
+  var separator = command.indexOf(':');
+  var mode = separator > -1 ? command.substring(0, separator) : 'redirect';
+  var encoded = separator > -1 ? command.substring(separator + 1) : command;
+  var target = decodeURIComponent(encoded);
+  document.getElementById('status').textContent = mode + ' ' + target;
+  if (mode === 'frame') {
+    var frame = document.createElement('iframe');
+    frame.id = 'probe-frame';
+    frame.width = '900';
+    frame.height = '600';
+    frame.src = target;
+    document.body.appendChild(frame);
+  } else if (mode === 'image') {
+    var image = document.createElement('img');
+    image.id = 'probe-image';
+    image.src = target;
+    document.body.appendChild(image);
+  } else {
+    window.location.replace(target);
   }
 })();
 </script>
