@@ -1,0 +1,14 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" cache="false">
+<html><head><title>Controlled UI Redirect Probe</title></head><body>
+<div id="status">controlled redirect probe</div>
+<script>
+(function(){
+  var target = window.location.hash.substring(1);
+  if (target) {
+    document.getElementById('status').textContent = 'redirecting';
+    window.location.replace(decodeURIComponent(target));
+  }
+})();
+</script>
+</body></html>
+</apex:page>
