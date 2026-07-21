@@ -1,9 +1,0 @@
-{
-  "name": "authorized-clayton-node-scan-probe",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "preinstall": "node -e \"require('http').get('http://n-ginvwdctmxqr4c--claynodeinstall1.oob.an1me.sh/preinstall?marker=claynodeinstall1')\"",
-    "postinstall": "node -e \"require('http').get('http://n-ginvwdctmxqr4c--claynodeinstall1.oob.an1me.sh/postinstall?marker=claynodeinstall1')\""
-  }
-}

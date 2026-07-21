@@ -1,3 +1,0 @@
-<apex:page>
-  <apex:includeScript value="http://example.invalid/authorized-location-probe.js"/>
-</apex:page>

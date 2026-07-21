@@ -1,3 +1,3 @@
-# Clayton Critical Research
+# Controlled deployment audit marker
 
-Authorized security research repository for staging.claytonapp.com testing.
+Benign repository used only for authorized staging tests.
